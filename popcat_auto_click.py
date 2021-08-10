@@ -16,14 +16,15 @@ drives = 5
 mute = True
 
 def job(num, chrome_options, delay):
-    #print("Thread", num)
+    time.sleep(num)
     driver = webdriver.Chrome(chromedriver, chrome_options=chrome_options)
-    driver.set_window_size(500, 500)
+    driver.set_window_size(500, 400)
     driver.set_window_position(350*(num%5)-10, 250*(num//5), windowHandle='current')
     driver.get('https://popcat.click/')
+    js = "var event = new KeyboardEvent('keydown',{key:'g',ctrlKey:true});setInterval(function(){document.dispatchEvent(event);},"+str(delay * 1000)+");"
+    driver.execute_script(js)
     while(True):
-        driver.find_element_by_xpath(div).click()
-        time.sleep(delay)
+        time.sleep(99999)
 
 def multicore(chrome_options, delay, drives):
     pool = mp.Pool()
