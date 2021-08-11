@@ -2,7 +2,8 @@
 - 檔案: setting.json
 - 參數: 
   - `chromedriver` chromedriver.exe 的路徑  
-    須配合Chrome的版本下載: <https://chromedriver.chromium.org/downloads>
+    須配合Chrome的版本下載: <https://chromedriver.chromium.org/downloads>  
+    或是 Edge 也可以: <https://developer.microsoft.com/zh-tw/microsoft-edge/tools/webdriver/>
   - `delay` 連點間隔
   - `drives` 多開數量
   - `mute` 聲音靜音
