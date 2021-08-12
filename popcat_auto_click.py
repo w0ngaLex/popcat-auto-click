@@ -12,7 +12,7 @@ chromedriver = "./chromedriver.exe"
 chrome_options = webdriver.ChromeOptions()
 div = '//*[@id="app"]'
 delay = 0.055
-drives = 5
+drives = 1
 mute = True
 
 def job(num, chrome_options, delay):
